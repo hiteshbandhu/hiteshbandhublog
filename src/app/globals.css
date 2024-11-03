@@ -2,20 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Colors */
+  --color-jet: #3c3744;
+  --color-duke-blue: #090c9b;
+  --color-byzantine-blue: #3d52d5;
+  --color-powder-blue: #b4c5e4;
+  --color-ivory: #fdfff9;
+
+  /* Semantic Colors */
+  --color-primary: var(--color-duke-blue);
+  --color-secondary: var(--color-byzantine-blue);
+  --color-accent: var(--color-powder-blue);
+  --color-background: var(--color-ivory);
+  --color-text: var(--color-jet);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-[var(--color-background)] text-[var(--color-text)];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[var(--color-primary)] font-bold;
+  }
+
+  a {
+    @apply text-[var(--color-secondary)] hover:text-[var(--color-primary)] transition-colors duration-200;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .btn-primary {
+    @apply bg-[var(--color-primary)] text-white hover:bg-[var(--color-secondary)] 
+           px-6 py-2 rounded-lg transition-colors duration-200 
+           font-medium shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply bg-[var(--color-secondary)] text-white hover:bg-[var(--color-primary)]
+           px-6 py-2 rounded-lg transition-colors duration-200
+           font-medium shadow-sm hover:shadow-md;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6
+           border border-[var(--color-accent)] hover:shadow-lg
+           transition-shadow duration-200;
+  }
 }
