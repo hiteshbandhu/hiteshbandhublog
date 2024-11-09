@@ -15,9 +15,36 @@ const navigationItems: NavigationItem[] = [
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showFlag, setShowFlag] = useState(true);
 
   return (
     <header className="w-full fixed top-0 z-50">
+      {showFlag && (
+        <div className="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white py-2 px-4 flex items-center justify-center relative">
+          <div className="flex items-center gap-2 text-sm font-medium">
+            <span role="img" aria-label="rocket">🚀</span>
+            Want an AI Product Developed?
+            <span role="img" aria-label="sparkles">✨</span>
+            <a
+              href="https://twitter.com/messages/compose?recipient_id=1508303360348213248"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:no-underline ml-2 text-yellow-100"
+            >
+              DM me on X (Twitter)
+            </a>
+          </div>
+          <button
+            onClick={() => setShowFlag(false)}
+            className="absolute right-4 p-1 hover:bg-blue-700/50 rounded transition-colors duration-200"
+            aria-label="Close banner"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      )}
       <nav className="bg-[var(--color-background)]/95 backdrop-blur-sm border-b border-[var(--color-accent)]/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
