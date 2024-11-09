@@ -21,20 +21,32 @@ const Hero: React.FC = () => {
                 Making AI Work for You
               </h1>
               <p className="text-lg md:text-xl text-[var(--color-text)] opacity-90">
-                Hey! I'm <strong>Hitesh</strong>, an AI Engineer specializing in <strong>enterprise solutions</strong>. 
-                I help businesses leverage AI technology through <em>custom RAG implementations</em>, <em>AI safety guardrails</em>, and <em>practical automation tools</em>. My focus is turning <strong>complex AI into simple, effective solutions</strong> that drive business value.
+                Hey! I'm <strong>Hitesh</strong>, and I help <strong>businesses achieve breakthrough results</strong> with AI. 
+                I transform how companies operate by <em>unlocking knowledge trapped in documents</em>, <em>ensuring AI systems you can trust</em>, and <em>automating costly manual processes</em>. My solutions deliver <strong>immediate business value</strong> without the complexity - so you can <strong>focus on growth</strong>.
               </p>
             </div>
 
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <div className="flex -space-x-2">
-                  {[1,2,3].map((i) => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-[var(--color-accent)] border-2 border-white"/>
+                  {[
+                    "/logos/microsoft.svg",
+                    "/logos/amazon.svg", 
+                    "/logos/google.svg"
+                  ].map((logo, i) => (
+                    <div key={i} className="w-8 h-8 rounded-full bg-white border-2 border-white overflow-hidden">
+                      <Image
+                        src={logo}
+                        alt="Client logo" 
+                        width={32}
+                        height={32}
+                        className="object-contain"
+                      />
+                    </div>
                   ))}
                 </div>
                 <p className="text-sm">
-                  Trusted by <span className="font-medium">growing businesses</span> worldwide
+                  Trusted by <span className="font-medium">25+ businesses</span> worldwide
                 </p>
               </div>
               
@@ -110,7 +122,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4 pt-16">
+        <div className="grid grid-cols-3 gap-4 pt-12">
               {[
                 { label: 'Successful Deployments', value: '10+' },
                 { label: 'Open Source Contributions', value: '50+' },
