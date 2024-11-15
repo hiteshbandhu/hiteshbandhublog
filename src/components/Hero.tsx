@@ -30,9 +30,9 @@ const Hero: React.FC = () => {
               <div className="flex items-center space-x-4">
                 <div className="flex -space-x-2">
                   {[
-                    "/logos/microsoft.svg",
-                    "/logos/amazon.svg", 
-                    "/logos/google.svg"
+                    "https://pbs.twimg.com/profile_images/1784877170877255681/5HGbA_Pq_400x400.jpg",
+                    "https://pbs.twimg.com/profile_images/1627923823835385857/reZOm5HO_400x400.jpg", 
+                    "https://pbs.twimg.com/profile_images/1399883582076690434/2OsHt6G5_400x400.jpg"
                   ].map((logo, i) => (
                     <div key={i} className="w-8 h-8 rounded-full bg-white border-2 border-white overflow-hidden">
                       <Image
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
                   ))}
                 </div>
                 <p className="text-sm">
-                  Trusted by <span className="font-medium">25+ businesses</span> worldwide
+                  Trusted by <span className="font-medium">15+ businesses</span> worldwide
                 </p>
               </div>
               
@@ -56,10 +56,10 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary text-center">
+              <Link href="https://cal.com/hiteshbandhu" className="btn-primary text-center">
                 Let's Talk
               </Link>
-              <Link href="/blog" className="btn-secondary text-center">
+              <Link href="https://blog.hiteshbandhu.xyz" className="btn-secondary text-center">
                 Read My Blog
               </Link>
             </div>
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
           <div className="relative">
             {/* New Blog Toast */}
             <div className="absolute -top-12 -left-8 z-10">
-              <Link href="/blog/latest" className="group">
+              <Link href="https://blog.hiteshbandhu.xyz" className="group">
                 <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border border-[var(--color-accent)] hover:scale-105 transition-transform duration-300">
                   <div className="p-2 bg-[var(--color-accent)]/20 rounded-full">
                     <FaRss className="w-4 h-4 text-[var(--color-primary)]" />

@@ -9,8 +9,7 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' }
+  { href: 'https://blog.hiteshbandhu.xyz', label: 'Blog' }
 ];
 
 const Header: React.FC = () => {
