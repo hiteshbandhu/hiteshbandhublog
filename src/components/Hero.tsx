@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
               <Link href="/contact" className="btn-primary text-center">
                 Let's Talk
               </Link>
-              <Link href="/blog" className="btn-secondary text-center">
+              <Link href="https://blog.hiteshbandhu.xyz" className="btn-secondary text-center">
                 Read My Blog
               </Link>
             </div>
@@ -69,14 +69,14 @@ const Hero: React.FC = () => {
           <div className="relative">
             {/* New Blog Toast */}
             <div className="absolute -top-12 -left-8 z-10">
-              <Link href="/blog/latest" className="group">
+              <Link href="https://blog.hiteshbandhu.xyz/blog/one-to-100-genai-roadmap" className="group">
                 <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border border-[var(--color-accent)] hover:scale-105 transition-transform duration-300">
                   <div className="p-2 bg-[var(--color-accent)]/20 rounded-full">
                     <FaRss className="w-4 h-4 text-[var(--color-primary)]" />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm font-medium">New Blog Post</p>
-                    <p className="text-xs text-[var(--color-text)]/70">Building Enterprise RAG Systems</p>
+                    <p className="text-xs text-[var(--color-text)]/70">1 to 100 GenAI Roadmap</p>     
                   </div>
                   <FaArrowRight className="w-4 h-4 text-[var(--color-secondary)] group-hover:translate-x-1 transition-transform" />
                 </div>
