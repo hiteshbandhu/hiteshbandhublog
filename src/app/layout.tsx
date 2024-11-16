@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { GoogleAnalytics } from 'nextjs-google-analytics';
 import "./globals.css";
+
 
 export const metadata: Metadata = {
   title: "Hitesh Bandhu | AI Engineer & Consultant",
@@ -29,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <GoogleAnalytics gaMeasurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         {children}
       </body>
     </html>
